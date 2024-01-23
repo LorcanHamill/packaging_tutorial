@@ -4,7 +4,9 @@ build-backend = "hatchling.build"
 
 [project]
 name = "example_package_lorcan_hamill"
-version = "0.0.3"
+dynamic = [
+    "version"
+]
 authors = [
   { name="Lorcan Hamill", email="lorcan@lorcanhamill.com" },
 ]
@@ -16,6 +18,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[tool.hatch.version]
+path = "src/example_package_lorcan_hamill/__about__.py"
 
 [project.urls]
 Homepage = "https://github.com/LorcanHamill/packaging_tutorial"
